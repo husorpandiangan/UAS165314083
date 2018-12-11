@@ -101,19 +101,17 @@
         function myFunction(response) {
             var arr = JSON.parse(response);
             var i;
-            var out = "<table>";
-
+            var out = "<table><tr><th>NIK</th><th>NAMA</th><th>TANGGAL LAHIR</th><th>DETAIL</th></tr>";
+            
             for (i = 0; i < arr.length; i++) {
                 out += "<tr><td>" +
                         arr[i].noRm +
                         "</td><td>" +
                         arr[i].nama +
-                        "</td><td>" +
-                        arr[i].alamat +
-                        "</td><td>" +
+                        "</td><td>" +                     
                         arr[i].tanggalLahir +
                         "</td><td>" +
-                        arr[i].kelamin;
+                        "detail";
                 
             }
             out += "</table>";
